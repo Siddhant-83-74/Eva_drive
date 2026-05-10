@@ -1,0 +1,26 @@
+# Archives / backups
+*.zip
+
+# ROS2 workspace build artifacts
+eva_ws/build/
+eva_ws/install/
+eva_ws/log/
+
+# Third-party ROS2 package (clone from upstream)
+eva_ws/src/sllidar_ros2/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Code review graph cache
+.code-review-graph/

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROS2 Nav2 Control Panel</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 ROS2 Nav2 Control Panel</h1>
+            <p>Click a location button to send your robot!</p>
+        </header>
+
+        <div class="status-panel">
+            <h2>Current Status</h2>
+            <div id="status">Connecting...</div>
+            <button id="refresh-status">🔄 Refresh Status</button>
+        </div>
+
+        <button id="reload-locations">🔄 Reload Locations</button>
+
+
+        <div class="locations-grid" id="locations-grid">
+            <h2>📍 Go To Location</h2>
+            <div class="grid-buttons" id="grid-buttons">
+                <div class="loading">Loading locations...</div>
+            </div>
+        </div>
+
+
+        <div class="locations-list">
+            <h3>📋 Location Coordinates</h3>
+            <pre id="locations-data">Loading locations...</pre>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

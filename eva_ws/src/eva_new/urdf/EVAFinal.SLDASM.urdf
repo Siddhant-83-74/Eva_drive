@@ -1,0 +1,6151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="eva_new">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00745592351437396 -0.000413177382484586 0.437451650705413"
+        rpy="0 0 0" />
+      <mass
+        value="40.2250200185337" />
+      <inertia
+        ixx="0.665198729868802"
+        ixy="9.58815052083154E-05"
+        ixz="0.000344653147825855"
+        iyy="0.203716573425201"
+        iyz="-0.000167805025827901"
+        izz="0.657629630941379" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Front_Left_Wheel_Link">
+    <inertial>
+      <origin
+        xyz="7.6841866203381E-12 -0.0114963238315501 1.29063426612674E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0926361820289158" />
+      <inertia
+        ixx="5.97116071189686E-05"
+        ixy="4.18657011512E-19"
+        ixz="-1.23671049599769E-19"
+        iyy="0.000118045810617743"
+        iyz="3.85256305251035E-20"
+        izz="5.97116071189684E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontLeftWheel"
+    type="revolute">
+    <origin
+      xyz="0.170556844484847 0.246000000000089 0.0250000000000091"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Front_Left_Wheel_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller1">
+    <inertial>
+      <origin
+        xyz="0 0 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="2.81958287953639E-24"
+        ixz="6.83474829601835E-23"
+        iyy="2.60053222073687E-07"
+        iyz="-2.82610654958166E-09"
+        izz="2.33437494634372E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR1"
+    type="revolute">
+    <origin
+      xyz="0.00558736236741719 -0.00200000000000056 0.0532074372787784"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller1" />
+    <axis
+      xyz="0 0.104436679764838 0.994531537921094" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller2">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -2.77555756156289E-17 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008635" />
+      <inertia
+        ixx="2.60349994145207E-07"
+        ixy="-2.87092000089806E-23"
+        ixz="5.09300835576513E-23"
+        iyy="2.54844361673939E-07"
+        iyz="1.09312515401792E-08"
+        izz="2.3864635503412E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR2"
+    type="revolute">
+    <origin
+      xyz="-0.0240657240543157 -0.00199999999999956 0.0477817007414092"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller2" />
+    <axis
+      xyz="0 -0.449826617837707 0.893115901708558" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller3">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 2.77555756156289E-17 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008633" />
+      <inertia
+        ixx="2.60349994145204E-07"
+        ixy="-1.4464604056338E-22"
+        ixz="7.84668269844954E-23"
+        iyy="2.40166389773256E-07"
+        iyz="1.1908118550962E-08"
+        izz="2.533243269348E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR3"
+    type="revolute">
+    <origin
+      xyz="-0.0460781131290851 -0.0019999999999995 0.0271856118280098"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller3" />
+    <axis
+      xyz="0 0.861273142599778 -0.508142277158969" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller4">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -6.93889390390723E-18 -7.68762831171443E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-3.2505187700777E-22"
+        ixz="-8.20333446790143E-24"
+        iyy="2.33180350397078E-07"
+        iyz="-1.03762909482715E-09"
+        izz="2.6031036631098E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR4"
+    type="revolute">
+    <origin
+      xyz="-0.0534610268577621 -0.00200000000000017 -0.00204171675642759"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller4" />
+    <axis
+      xyz="0 0.999271530051651 0.0381629300268332" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller5">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 1.90819582357449E-17 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145205E-07"
+        ixy="6.38982826418615E-23"
+        ixz="4.69949862309087E-23"
+        iyy="2.42054111021187E-07"
+        iyz="-1.27702119587995E-08"
+        izz="2.51436605686871E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR5"
+    type="revolute">
+    <origin
+      xyz="-0.0438704422966681 -0.0019999999999995 -0.0306208146967835"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller5" />
+    <axis
+      xyz="0 0.820008267227364 0.572351676575492" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller6">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -1.21430643318376E-17 -7.68762831171443E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="3.97776513415401E-23"
+        ixz="9.3638787132147E-23"
+        iyy="2.56412737167445E-07"
+        iyz="-9.57224643897643E-09"
+        izz="2.37077979540614E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR6"
+    type="revolute">
+    <origin
+      xyz="-0.0203513022801199 -0.00199999999998463 -0.0494780203272744"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller6" />
+    <axis
+      xyz="0 0.38039817345994 0.924822809855132" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller7">
+    <inertial>
+      <origin
+        xyz="0 0 -7.68751728941197E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008635" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="1.61060219048786E-24"
+        ixz="2.73647541196578E-23"
+        iyy="2.5946855427781E-07"
+        iyz="4.81730220099044E-09"
+        izz="2.34022162430249E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR7"
+    type="revolute">
+    <origin
+      xyz="0.00962923241495628 -0.00199999999999262 -0.0526263040988015"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller7" />
+    <axis
+      xyz="0 -0.179985652615959 0.983669235491487" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller8">
+    <inertial>
+      <origin
+        xyz="0 1.12757025938492E-17 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145205E-07"
+        ixy="-1.25784079975352E-22"
+        ixz="1.30066350205858E-22"
+        iyy="2.47648792740819E-07"
+        iyz="1.3574605751893E-08"
+        izz="2.45841923967239E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR8"
+    type="continuous">
+    <origin
+      xyz="0.0365525538551655 -0.00200000000000011 -0.0390661081586711"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller8" />
+    <axis
+      xyz="0 -0.683225305704138 0.730207629133993" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller9">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 0 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="1.46051306855714E-22"
+        ixz="-4.16535845873702E-23"
+        iyy="2.34772762845318E-07"
+        iyz="6.46088784884559E-09"
+        izz="2.5871795386274E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR9"
+    type="revolute">
+    <origin
+      xyz="0.0518706977143724 -0.00199999999999861 -0.0131026989060977"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller9" />
+    <axis
+      xyz="0 -0.96954575167059 0.244910259927" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller10">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 0 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-2.81803235170242E-23"
+        ixz="-2.07835086534884E-23"
+        iyy="2.35894732129404E-07"
+        iyz="-8.20670613242889E-09"
+        izz="2.57595984578654E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR10"
+    type="revolute">
+    <origin
+      xyz="0.0507202615501099 -0.00200000000000061 0.0170207246699206"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller10" />
+    <axis
+      xyz="0 0.948042271964547 0.318144386353586" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller11">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 1.38777878078145E-17 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="1.02102841869231E-22"
+        ixz="1.2117253743079E-22"
+        iyy="2.49702927794378E-07"
+        iyz="-1.32792657182573E-08"
+        izz="2.43787788913681E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR11"
+    type="revolute">
+    <origin
+      xyz="0.033466500715913 -0.00200000000000006 0.0417401884259228"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller11" />
+    <axis
+      xyz="0 0.625542069456362 0.780190437867737" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller12">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 -1.38777878078145E-17 -7.68762831171443E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008633" />
+      <inertia
+        ixx="2.60349994145205E-07"
+        ixy="-5.46148337656904E-23"
+        ixz="2.20087178341826E-22"
+        iyy="2.59468554277808E-07"
+        iyz="4.81730220099075E-09"
+        izz="2.34022162430248E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR12"
+    type="revolute">
+    <origin
+      xyz="-0.00962923241495206 -0.0209999999999972 0.0526263040987895"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller12" />
+    <axis
+      xyz="0 -0.179985652615976 0.983669235491484" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller13">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 4.16333634234434E-17 -7.68762831171443E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-9.34631168519755E-23"
+        ixz="9.78379157747297E-23"
+        iyy="2.47648792740819E-07"
+        iyz="1.35746057518932E-08"
+        izz="2.4584192396724E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR13"
+    type="revolute">
+    <origin
+      xyz="-0.036552553855172 -0.0210000000000001 0.0390661081586672"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller13" />
+    <axis
+      xyz="0 0.683225305704146 -0.730207629133986" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller14">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 0 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-2.2154428407586E-22"
+        ixz="5.79244500793864E-23"
+        iyy="2.34772762845318E-07"
+        iyz="6.46088784884557E-09"
+        izz="2.5871795386274E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller14.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller14.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR14"
+    type="revolute">
+    <origin
+      xyz="-0.0518706977143706 -0.0210000000000002 0.0131026989061009"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller14" />
+    <axis
+      xyz="0 0.96954575167059 -0.244910259926999" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller15">
+    <inertial>
+      <origin
+        xyz="0 0 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008635" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-3.78649490398788E-23"
+        ixz="-1.41677159012194E-23"
+        iyy="2.35894732129405E-07"
+        iyz="-8.20670613242963E-09"
+        izz="2.57595984578654E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller15.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller15.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR15"
+    type="revolute">
+    <origin
+      xyz="-0.0507202615501009 -0.0210000000000007 -0.017020724669909"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller15" />
+    <axis
+      xyz="0 0.948042271964542 0.318144386353601" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller16">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -1.73472347597681E-17 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="1.76457524317457E-22"
+        ixz="2.28285394235844E-22"
+        iyy="2.49702927794378E-07"
+        iyz="-1.32792657182573E-08"
+        izz="2.4378778891368E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller16.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller16.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR16"
+    type="revolute">
+    <origin
+      xyz="-0.0334665007159201 -0.0209999999999999 -0.0417401884259193"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller16" />
+    <axis
+      xyz="0 0.625542069456344 0.780190437867752" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller17">
+    <inertial>
+      <origin
+        xyz="1.66533453693773E-16 1.73472347597681E-18 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145205E-07"
+        ixy="5.86222590930172E-24"
+        ixz="6.15369079374747E-23"
+        iyy="2.60053222073686E-07"
+        iyz="-2.82610654958127E-09"
+        izz="2.33437494634371E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller17.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller17.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR17"
+    type="revolute">
+    <origin
+      xyz="-0.00558736236742008 -0.0209999999999791 -0.0532074372788041"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller17" />
+    <axis
+      xyz="0 -0.104436679764824 -0.994531537921096" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller18">
+    <inertial>
+      <origin
+        xyz="1.11022302462516E-16 1.73472347597681E-18 -7.68796137862182E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145205E-07"
+        ixy="-5.60509341270327E-23"
+        ixz="1.11536915825358E-22"
+        iyy="2.54844361673937E-07"
+        iyz="1.09312515401792E-08"
+        izz="2.3864635503412E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller18.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller18.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR18"
+    type="revolute">
+    <origin
+      xyz="0.0240657240543096 -0.0210000000000005 -0.047781700741408"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller18" />
+    <axis
+      xyz="0 0.449826617837727 -0.893115901708547" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller19">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 1.04083408558608E-17 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-1.33600702711001E-22"
+        ixz="6.95941973843559E-23"
+        iyy="2.40166389773256E-07"
+        iyz="1.19081185509622E-08"
+        izz="2.53324326934802E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller19.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller19.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR19"
+    type="revolute">
+    <origin
+      xyz="0.0460781131290943 -0.021 -0.0271856118280006"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller19" />
+    <axis
+      xyz="0 0.861273142599789 -0.50814227715895" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller20">
+    <inertial>
+      <origin
+        xyz="0 0 -7.68751728941197E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-8.32432429615319E-23"
+        ixz="-5.14802693553356E-24"
+        iyy="2.33180350397078E-07"
+        iyz="-1.03762909482716E-09"
+        izz="2.6031036631098E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller20.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller20.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR20"
+    type="revolute">
+    <origin
+      xyz="0.0534610268577576 -0.0210000000000009 0.00204171675643339"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller20" />
+    <axis
+      xyz="0 0.99927153005165 0.0381629300268483" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller21">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 0 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="3.09810909898225E-23"
+        ixz="4.11641452372142E-23"
+        iyy="2.42054111021187E-07"
+        iyz="-1.27702119587997E-08"
+        izz="2.51436605686871E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller21.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller21.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR21"
+    type="revolute">
+    <origin
+      xyz="0.0438704422966597 -0.0210000000000005 0.0306208146967869"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller21" />
+    <axis
+      xyz="0 0.820008267227355 0.572351676575505" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Left_Wheel_Roller22">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 1.38777878078145E-17 -7.68762831171443E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="4.26453425956407E-23"
+        ixz="1.01521122881659E-22"
+        iyy="2.56412737167445E-07"
+        iyz="-9.572246438976E-09"
+        izz="2.37077979540614E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Left_Wheel_Roller22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWR22"
+    type="revolute">
+    <origin
+      xyz="0.020351302280101 -0.0209999999999952 0.0494780203272388"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Left_Wheel_Link" />
+    <child
+      link="Front_Left_Wheel_Roller22" />
+    <axis
+      xyz="0 0.380398173459924 0.924822809855138" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Link">
+    <inertial>
+      <origin
+        xyz="-0.0114963238238626 -4.87457296749483E-16 1.85268467234323E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0926361820289156" />
+      <inertia
+        ixx="0.000118045810617742"
+        ixy="1.90454951371114E-19"
+        ixz="-6.12609643736807E-19"
+        iyy="5.97116071189685E-05"
+        iyz="2.01237326602511E-19"
+        izz="5.97116071189684E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontRightWheel"
+    type="revolute">
+    <origin
+      xyz="0.248681844485111 -0.167874999999853 0.0250000000000074"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Front_Right_Wheel_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller1">
+    <inertial>
+      <origin
+        xyz="-3.12250225675825E-17 -1.2490009027033E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.33940210208466E-07"
+        ixy="-4.59502948638544E-09"
+        ixz="5.29361367520097E-22"
+        iyy="2.59550506499592E-07"
+        iyz="8.93186502432448E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR1"
+    type="revolute">
+    <origin
+      xyz="-0.00199999999999934 0.00917067288984969 0.05270814698647"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller1" />
+    <axis
+      xyz="-0.985199009092891 -0.171414446539331 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller2">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-17 -8.32667268468867E-17 -7.68762831171443E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.45605693411062E-07"
+        ixy="-1.35568166922895E-08"
+        ixz="2.24896949883476E-22"
+        iyy="2.47885023296996E-07"
+        iyz="2.04321272612485E-22"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR2"
+    type="revolute">
+    <origin
+      xyz="-0.00199999999999956 0.0362110366403566 0.0393828747735674"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller2" />
+    <axis
+      xyz="0.736128500440453 0.676841806361937 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller3">
+    <inertial>
+      <origin
+        xyz="-2.08166817117217E-17 -1.04083408558608E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.58603638645392E-07"
+        ixy="-6.66838087859794E-09"
+        ixz="1.5584918209671E-22"
+        iyy="2.34887078062667E-07"
+        iyz="5.75728920615273E-22"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR3"
+    type="revolute">
+    <origin
+      xyz="-0.00200000000000089 0.0517546521125101 0.0135538180861543"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller3" />
+    <axis
+      xyz="0.25334239413361 0.967376675000307 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller4">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-17 -1.07552855510562E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.57737238619828E-07"
+        ixy="8.01652563352095E-09"
+        ixz="1.75920713805084E-22"
+        iyy="2.3575347808823E-07"
+        iyz="-5.40656636921628E-22"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR4"
+    type="revolute">
+    <origin
+      xyz="-0.00200000000000045 0.050866531219842 -0.0165784800769124"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller4" />
+    <axis
+      xyz="-0.309878132278836 0.950776284483043 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller5">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -1.14925430283463E-16 -7.68796137862182E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.44019462229731E-07"
+        ixy="1.3328751079156E-08"
+        ixz="2.13267881071998E-22"
+        iyy="2.49471254478327E-07"
+        iyz="-1.80838570106289E-22"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR5"
+    type="revolute">
+    <origin
+      xyz="-0.00199999999998557 0.0338286460706206 -0.0414472279535254"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller5" />
+    <axis
+      xyz="-0.774714541187006 0.632311141506621 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller6">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -1.14491749414469E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.33488721740395E-07"
+        ixy="3.05740097217206E-09"
+        ixz="1.55084278031714E-22"
+        iyy="2.60001994967662E-07"
+        iyz="-1.05462637733535E-24"
+        izz="2.60349994145205E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR6"
+    type="revolute">
+    <origin
+      xyz="-0.00199999999999323 0.00605040481573612 -0.0531567738069806"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller6" />
+    <axis
+      xyz="-0.993584557139678 0.11309167879888 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller7">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -1.1145598333151E-16 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.384572427359E-07"
+        ixy="-1.07885705499425E-08"
+        ixz="1.10503862287636E-22"
+        iyy="2.55033473972158E-07"
+        iyz="5.48386099782389E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR7"
+    type="revolute">
+    <origin
+      xyz="-0.00200000000000067 -0.0236487972180009 -0.047989419564544"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller7" />
+    <axis
+      xyz="-0.896998496533507 -0.442033592859896 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller8">
+    <inertial>
+      <origin
+        xyz="-2.08166817117217E-17 -1.07552855510562E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.5311597965313E-07"
+        ixy="-1.20208693227241E-08"
+        ixz="2.23892668400313E-22"
+        iyy="2.40374737054928E-07"
+        iyz="3.85675548612868E-22"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR8"
+    type="revolute">
+    <origin
+      xyz="-0.00199999999999856 -0.0458396732294469 -0.0275857636874074"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller8" />
+    <axis
+      xyz="-0.51562175116646 -0.856816322045766 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller9">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -1.04083408558608E-16 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60326377431751E-07"
+        ixy="8.01271377955377E-10"
+        ixz="6.52644399798167E-24"
+        iyy="2.33164339276308E-07"
+        iyz="2.13040109285993E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR9"
+    type="revolute">
+    <origin
+      xyz="-0.00200000000000011 -0.0534767768782069 0.00157617724879147"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller9" />
+    <axis
+      xyz="-0.0294612569867233 0.999565922956941 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller10">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -9.71445146547012E-17 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.51658255488429E-07"
+        ixy="1.26865896425069E-08"
+        ixz="-1.91366619256167E-22"
+        iyy="2.41832461219628E-07"
+        iyz="2.79748428252941E-22"
+        izz="2.60349994145205E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR10"
+    type="revolute">
+    <origin
+      xyz="-0.00199999999999934 -0.0441353817169671 0.0302376930452308"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller10" />
+    <axis
+      xyz="-0.565190524209928 0.824960405924616 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller11">
+    <inertial>
+      <origin
+        xyz="-2.25514051876985E-17 -1.2490009027033E-16 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.37246121730235E-07"
+        ixy="9.73912822462772E-09"
+        ixz="1.73511807571814E-22"
+        iyy="2.56244594977822E-07"
+        iyz="-9.67985953628097E-23"
+        izz="2.60349994145205E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR11"
+    type="revolute">
+    <origin
+      xyz="-0.00199999999999978 -0.0207813147063068 0.0492989549491415"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller11" />
+    <axis
+      xyz="-0.921475793441896 0.388435788902913 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller12">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -9.71445146547012E-17 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.384572427359E-07"
+        ixy="-1.07885705499426E-08"
+        ixz="1.50905658297852E-22"
+        iyy="2.55033473972158E-07"
+        iyz="7.46058950161216E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR12"
+    type="revolute">
+    <origin
+      xyz="-0.021 0.0236487972180019 0.0479894195645413"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller12" />
+    <axis
+      xyz="0.896998496533502 0.442033592859906 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller13">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-17 -1.11022302462516E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.5311597965313E-07"
+        ixy="-1.20208693227239E-08"
+        ixz="3.38309308132253E-23"
+        iyy="2.40374737054928E-07"
+        iyz="5.57343792246801E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR13"
+    type="revolute">
+    <origin
+      xyz="-0.0210000000000006 0.0458396732294378 0.0275857636874092"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller13" />
+    <axis
+      xyz="0.515621751166457 0.856816322045768 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller14">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -1.11022302462516E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60326377431751E-07"
+        ixy="8.01271377955835E-10"
+        ixz="7.35530261507219E-25"
+        iyy="2.33164339276308E-07"
+        iyz="1.80760490538737E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller14.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller14.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR14"
+    type="revolute">
+    <origin
+      xyz="-0.0210000000000014 0.0534767768781885 -0.00157617724878369"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller14" />
+    <axis
+      xyz="-0.0294612569867402 0.999565922956941 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller15">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -1.09287578986539E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.51658255488429E-07"
+        ixy="1.26865896425072E-08"
+        ixz="-2.71493866443828E-22"
+        iyy="2.41832461219629E-07"
+        iyz="3.77539810710422E-22"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller15.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller15.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR15"
+    type="revolute">
+    <origin
+      xyz="-0.0210000000000006 0.0441353817169664 -0.0302376930452261"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller15" />
+    <axis
+      xyz="-0.565190524209949 0.824960405924602 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller16">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -1.0842021724855E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.37246121730235E-07"
+        ixy="9.73912822462754E-09"
+        ixz="1.81379183614911E-22"
+        iyy="2.56244594977823E-07"
+        iyz="-7.31699021700172E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller16.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller16.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR16"
+    type="revolute">
+    <origin
+      xyz="-0.02099999999998 0.0207813147063106 -0.0492989549491659"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller16" />
+    <axis
+      xyz="0.921475793441901 -0.3884357889029 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller17">
+    <inertial>
+      <origin
+        xyz="-2.91650384398601E-17 -1.0842021724855E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.33940210208466E-07"
+        ixy="-4.595029486386E-09"
+        ixz="9.62924612992381E-23"
+        iyy="2.59550506499592E-07"
+        iyz="1.52196144575028E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller17.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller17.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR17"
+    type="revolute">
+    <origin
+      xyz="-0.0210000000000011 -0.00917067288985076 -0.0527081469864677"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller17" />
+    <axis
+      xyz="0.985199009092887 0.171414446539354 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller18">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -1.09287578986539E-16 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.45605693411063E-07"
+        ixy="-1.35568166922895E-08"
+        ixz="-3.82943202847912E-23"
+        iyy="2.47885023296995E-07"
+        iyz="-4.02766552900467E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller18.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller18.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR18"
+    type="revolute">
+    <origin
+      xyz="-0.0210000000000002 -0.0362110366403746 -0.0393828747735619"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller18" />
+    <axis
+      xyz="0.736128500440442 0.676841806361949 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller19">
+    <inertial>
+      <origin
+        xyz="-2.08166817117217E-17 -1.04083408558608E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.58603638645392E-07"
+        ixy="-6.66838087859752E-09"
+        ixz="-2.15429964703678E-23"
+        iyy="2.34887078062666E-07"
+        iyz="-1.01653804689899E-22"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller19.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller19.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR19"
+    type="revolute">
+    <origin
+      xyz="-0.0210000000000005 -0.0517546521125138 -0.0135538180861481"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller19" />
+    <axis
+      xyz="0.253342394133594 0.967376675000312 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller20">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -1.17961196366423E-16 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.57737238619828E-07"
+        ixy="8.01652563352122E-09"
+        ixz="1.70724567066257E-22"
+        iyy="2.3575347808823E-07"
+        iyz="-5.43945032111706E-22"
+        izz="2.60349994145205E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller20.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller20.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR20"
+    type="revolute">
+    <origin
+      xyz="-0.0209999999999998 -0.0508665312198413 0.0165784800769173"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller20" />
+    <axis
+      xyz="-0.30987813227885 0.950776284483038 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller21">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -1.11022302462516E-16 -7.68796137862182E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.44019462229731E-07"
+        ixy="1.33287510791559E-08"
+        ixz="2.00775547521738E-22"
+        iyy="2.49471254478328E-07"
+        iyz="-1.98912109919809E-22"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller21.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller21.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR21"
+    type="revolute">
+    <origin
+      xyz="-0.0209999999999946 -0.0338286460705984 0.0414472279534964"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller21" />
+    <axis
+      xyz="-0.774714541187017 0.632311141506608 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Front_Right_Wheel_Roller22">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -1.11022302462516E-16 -7.6877393340169E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.33488721740395E-07"
+        ixy="3.05740097217162E-09"
+        ixz="1.31255459380965E-22"
+        iyy="2.60001994967662E-07"
+        iyz="-3.27426672881665E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Front_Right_Wheel_Roller22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWR22"
+    type="revolute">
+    <origin
+      xyz="-0.0209999999999967 -0.00605040481574303 0.0531567738069671"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Front_Right_Wheel_Link" />
+    <child
+      link="Front_Right_Wheel_Roller22" />
+    <axis
+      xyz="-0.99358455713968 0.113091678798863 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Link">
+    <inertial>
+      <origin
+        xyz="7.68829444552921E-12 0.00750367616844957 -1.42247325030098E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0926361820289157" />
+      <inertia
+        ixx="5.97116071189686E-05"
+        ixy="-4.54239600742989E-22"
+        ixz="5.88001338433294E-20"
+        iyy="0.000118045810617743"
+        iyz="3.76217390251484E-20"
+        izz="5.97116071189684E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BackRightWheel"
+    type="revolute">
+    <origin
+      xyz="-0.165193155514665 -0.242000000000016 0.0250000000000119"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Back_Right_Wheel_Link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller1">
+    <inertial>
+      <origin
+        xyz="0 -1.11022302462516E-16 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008635" />
+      <inertia
+        ixx="2.60349994145207E-07"
+        ixy="9.27535821427467E-24"
+        ixz="-6.51028787321047E-23"
+        iyy="2.60336660902105E-07"
+        iyz="6.02171119608545E-10"
+        izz="2.33154055805956E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR1"
+    type="revolute">
+    <origin
+      xyz="-0.00118430407355419 -0.00200000000000032 0.0534868902055545"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller1" />
+    <axis
+      xyz="0 0.0221365247394374 -0.999754957113222" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller2">
+    <inertial>
+      <origin
+        xyz="0 -1.11022302462516E-16 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008636" />
+      <inertia
+        ixx="2.60349994145207E-07"
+        ixy="-4.88340806640695E-23"
+        ixz="-7.72425696602669E-23"
+        iyy="2.52939143595826E-07"
+        iyz="-1.21129327327901E-08"
+        izz="2.40551573112235E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR2"
+    type="revolute">
+    <origin
+      xyz="0.0279208960580639 -0.00200000000000122 0.0456363184680134"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller2" />
+    <axis
+      xyz="0 -0.521885907627328 -0.853015298467736" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller3">
+    <inertial>
+      <origin
+        xyz="0 -1.11022302462516E-16 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-9.35381492578218E-24"
+        ixz="-5.62925351869531E-24"
+        iyy="2.38300038559458E-07"
+        iyz="-1.06659593369741E-08"
+        izz="2.551906781486E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR3"
+    type="continuous">
+    <origin
+      xyz="0.0481614089708708 -0.00200000000000083 0.0232965380676992"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller3" />
+    <axis
+      xyz="0 -0.900213251792024 -0.435449309676833" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller4">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 -9.71445146547012E-17 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-1.24274608044043E-22"
+        ixz="1.12773881361039E-23"
+        iyy="2.335349478477E-07"
+        iyz="3.2513334594962E-09"
+        izz="2.59955768860358E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR4"
+    type="revolute">
+    <origin
+      xyz="0.0531110148276842 -0.00200000000000064 -0.00643972856363086"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller4" />
+    <axis
+      xyz="0 -0.992729249115645 0.120368758198661" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller5">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 -1.12757025938492E-16 -7.68751728941197E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008635" />
+      <inertia
+        ixx="2.60349994145207E-07"
+        ixy="3.35474015074159E-23"
+        ixz="-2.57133791722334E-23"
+        iyy="2.44215072444108E-07"
+        iyz="1.33672647996749E-08"
+        izz="2.49275644263952E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR5"
+    type="revolute">
+    <origin
+      xyz="0.0411982487412013 -0.00199999999999731 -0.0341314268769638"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller5" />
+    <axis
+      xyz="0 0.770060724134743 -0.637970595831089" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller7">
+    <inertial>
+      <origin
+        xyz="0 -1.196959198424E-16 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008632" />
+      <inertia
+        ixx="2.60349994145204E-07"
+        ixy="-3.68346264997487E-23"
+        ixz="-7.01208074957214E-23"
+        iyy="2.58504647924725E-07"
+        iyz="-6.84143433813734E-09"
+        izz="2.34986068783331E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR7"
+    type="revolute">
+    <origin
+      xyz="-0.0139326668979061 -0.00200000000000014 -0.051653952347442"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller7" />
+    <axis
+      xyz="0 -0.260423680334677 -0.965494436400823" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller8">
+    <inertial>
+      <origin
+        xyz="0 -1.02348685082632E-16 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008636" />
+      <inertia
+        ixx="2.60349994145207E-07"
+        ixy="-6.16736710665225E-23"
+        ixz="-5.73514427086068E-23"
+        iyy="2.45407156215848E-07"
+        iyz="-1.35386605706747E-08"
+        izz="2.48083560492213E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR8"
+    type="revolute">
+    <origin
+      xyz="-0.039647140271557 -0.0020000000000006 -0.0359215014759572"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller8" />
+    <axis
+      xyz="0 -0.741068042459017 -0.671429934130108" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller9">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 -1.04083408558608E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008633" />
+      <inertia
+        ixx="2.60349994145205E-07"
+        ixy="-8.40244498334745E-23"
+        ixz="-1.29509393674512E-23"
+        iyy="2.33874250266066E-07"
+        iyz="-4.40689137585128E-09"
+        izz="2.59616466441991E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR9"
+    type="revolute">
+    <origin
+      xyz="-0.0527739267423013 -0.0019999999999999 -0.00878422769506973"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller9" />
+    <axis
+      xyz="0 -0.986428537239196 -0.164191171870295" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller10">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 -1.11022302462516E-16 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145205E-07"
+        ixy="-2.39853493459277E-24"
+        ixz="1.19899218630348E-24"
+        iyy="2.37389857424792E-07"
+        iyz="9.87728289427882E-09"
+        izz="2.56100859283265E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR10"
+    type="revolute">
+    <origin
+      xyz="-0.0491453643551012 -0.00200000000000057 0.0211419763126368"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller10" />
+    <axis
+      xyz="0 -0.918604941216924 0.395177127338933" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller11">
+    <inertial>
+      <origin
+        xyz="0 -9.71445146547012E-17 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008635" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="4.08450832081856E-23"
+        ixz="-6.13045940315066E-23"
+        iyy="2.51843635361676E-07"
+        iyz="1.26132345797526E-08"
+        izz="2.41647081346383E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR11"
+    type="revolute">
+    <origin
+      xyz="-0.0299134960297354 -0.00199999999997959 0.0443557522231519"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller11" />
+    <axis
+      xyz="0 -0.559130766910631 0.829079480806231" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller12">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-18 -1.2490009027033E-16 -7.68718422250458E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145205E-07"
+        ixy="-2.60555018512941E-23"
+        ixz="-1.01583023786023E-22"
+        iyy="2.58504647924726E-07"
+        iyz="-6.84143433813793E-09"
+        izz="2.34986068783332E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR12"
+    type="revolute">
+    <origin
+      xyz="0.013932666897911 0.017 0.0516539523474401"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller12" />
+    <axis
+      xyz="0 -0.260423680334691 -0.965494436400819" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller13">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-18 -9.71445146547012E-17 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008635" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-2.70898510410774E-23"
+        ixz="-3.17833898578072E-23"
+        iyy="2.45407156215847E-07"
+        iyz="-1.35386605706742E-08"
+        izz="2.48083560492213E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR13"
+    type="revolute">
+    <origin
+      xyz="0.0396471402715601 0.0169999999999993 0.035921501475951"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller13" />
+    <axis
+      xyz="0 -0.741068042459029 -0.671429934130094" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller14">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-18 -9.71445146547012E-17 -7.68729524480705E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-6.89704646510971E-23"
+        ixz="-1.99001231220693E-23"
+        iyy="2.33874250266067E-07"
+        iyz="-4.40689137585158E-09"
+        izz="2.59616466441992E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller14.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller14.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR14"
+    type="revolute">
+    <origin
+      xyz="0.052773926742296 0.0170000000000001 0.00878422769505204"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller14" />
+    <axis
+      xyz="0 -0.986428537239198 -0.164191171870282" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller15">
+    <inertial>
+      <origin
+        xyz="0 -1.17961196366423E-16 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145205E-07"
+        ixy="3.64239620177569E-23"
+        ixz="1.87066653514983E-23"
+        iyy="2.37389857424792E-07"
+        iyz="9.87728289427919E-09"
+        izz="2.56100859283265E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller15.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller15.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR15"
+    type="revolute">
+    <origin
+      xyz="0.0491453643551024 0.0170000000000001 -0.0211419763126387"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller15" />
+    <axis
+      xyz="0 0.918604941216912 -0.395177127338961" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller16">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-18 -1.15575951586955E-16 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008637" />
+      <inertia
+        ixx="2.60349994145208E-07"
+        ixy="2.93254710820244E-23"
+        ixz="-4.44012017904132E-23"
+        iyy="2.51843635361678E-07"
+        iyz="1.26132345797529E-08"
+        izz="2.41647081346384E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller16.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller16.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR16"
+    type="revolute">
+    <origin
+      xyz="0.0299134960297172 0.0169999999999995 -0.0443557522231351"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller16" />
+    <axis
+      xyz="0 0.559130766910617 -0.829079480806241" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller17">
+    <inertial>
+      <origin
+        xyz="0 -1.09287578986539E-16 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008635" />
+      <inertia
+        ixx="2.60349994145207E-07"
+        ixy="-2.52138477465368E-23"
+        ixz="-8.68119967519252E-23"
+        iyy="2.60336660902104E-07"
+        iyz="6.0217111960781E-10"
+        izz="2.33154055805956E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller17.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller17.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR17"
+    type="revolute">
+    <origin
+      xyz="0.00118430407355774 0.0170000000000002 -0.0534868902055574"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller17" />
+    <axis
+      xyz="0 0.0221365247394133 -0.999754957113222" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller18">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-18 -1.12865446155741E-16 -7.68718422250458E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-5.63715002499106E-23"
+        ixz="-4.42305134501887E-23"
+        iyy="2.52939143595823E-07"
+        iyz="-1.211293273279E-08"
+        izz="2.40551573112235E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller18.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller18.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR18"
+    type="revolute">
+    <origin
+      xyz="-0.0279208960580675 0.0169999999999998 -0.0456363184680329"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller18" />
+    <axis
+      xyz="0 -0.521885907627343 -0.853015298467726" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller19">
+    <inertial>
+      <origin
+        xyz="-6.93889390390723E-18 -1.35308431126191E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-5.03914205795405E-23"
+        ixz="-1.60909322317939E-23"
+        iyy="2.38300038559457E-07"
+        iyz="-1.06659593369738E-08"
+        izz="2.55190678148601E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller19.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller19.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR19"
+    type="revolute">
+    <origin
+      xyz="-0.0481614089708744 0.0170000000000015 -0.0232965380677075"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller19" />
+    <axis
+      xyz="0 0.900213251792026 0.435449309676828" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller20">
+    <inertial>
+      <origin
+        xyz="-6.93889390390723E-18 -1.11022302462516E-16 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008635" />
+      <inertia
+        ixx="2.60349994145206E-07"
+        ixy="-3.23561211899332E-23"
+        ixz="2.8459305049702E-24"
+        iyy="2.33534947847701E-07"
+        iyz="3.25133345949712E-09"
+        izz="2.59955768860358E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller20.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller20.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR20"
+    type="revolute">
+    <origin
+      xyz="-0.0531110148276859 0.017 0.00643972856363332"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller20" />
+    <axis
+      xyz="0 0.992729249115643 -0.120368758198676" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller21">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-18 -9.71445146547012E-17 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008636" />
+      <inertia
+        ixx="2.60349994145207E-07"
+        ixy="3.15358225896036E-23"
+        ixz="-2.95668991428776E-23"
+        iyy="2.44215072444108E-07"
+        iyz="1.3367264799675E-08"
+        izz="2.49275644263952E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller21.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller21.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR21"
+    type="revolute">
+    <origin
+      xyz="-0.0411982487412161 0.0170000000000072 0.0341314268769656"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller21" />
+    <axis
+      xyz="0 0.770060724134729 -0.637970595831106" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller22">
+    <inertial>
+      <origin
+        xyz="0 -8.32667268468867E-17 -7.68762831171443E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008635" />
+      <inertia
+        ixx="2.60349994145208E-07"
+        ixy="3.21249425658558E-23"
+        ixz="-8.24320814881873E-23"
+        iyy="2.57853531352022E-07"
+        iyz="7.85459150161614E-09"
+        izz="2.35637185356038E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR22"
+    type="revolute">
+    <origin
+      xyz="-0.0162053297723188 0.0170000000000151 0.0509866383180263"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller22" />
+    <axis
+      xyz="0 0.302903360230112 -0.953021276971982" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Right_Wheel_Roller6">
+    <inertial>
+      <origin
+        xyz="0 -9.8879238130678E-17 -7.68740626710951E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008636" />
+      <inertia
+        ixx="2.60349994145208E-07"
+        ixy="1.22305870748687E-23"
+        ixz="-6.00176366801423E-23"
+        iyy="2.57853531352022E-07"
+        iyz="7.85459150161646E-09"
+        izz="2.35637185356039E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Right_Wheel_Roller6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWR6"
+    type="revolute">
+    <origin
+      xyz="0.0162053297723066 -0.00199999999999503 -0.0509866383179915"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Right_Wheel_Link" />
+    <child
+      link="Back_Right_Wheel_Roller6" />
+    <axis
+      xyz="0 0.302903360230128 -0.953021276971977" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Link">
+    <inertial>
+      <origin
+        xyz="0.00750367617613712 -4.44089209850063E-16 1.48492329543615E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0926361820289156" />
+      <inertia
+        ixx="0.000118045810617742"
+        ixy="-2.08451507447964E-19"
+        ixz="-6.16103282741664E-19"
+        iyy="5.97116071189685E-05"
+        iyz="1.11881761316934E-19"
+        izz="5.97116071189685E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BackLeftWheel"
+    type="revolute">
+    <origin
+      xyz="-0.239318155514439 0.167874999999956 0.0250000000000171"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Back_Left_Wheel_Link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller1">
+    <inertial>
+      <origin
+        xyz="0 -9.71445146547012E-17 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008635" />
+      <inertia
+        ixx="2.33488721740396E-07"
+        ixy="3.0574009721716E-09"
+        ixz="2.4512111323448E-23"
+        iyy="2.60001994967663E-07"
+        iyz="1.50410220437253E-24"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR1"
+    type="revolute">
+    <origin
+      xyz="-0.00199999999999667 -0.00605040481574298 0.053156773806967"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller1" />
+    <axis
+      xyz="-0.99358455713968 0.113091678798865 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller2">
+    <inertial>
+      <origin
+        xyz="0 -1.11022302462516E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008635" />
+      <inertia
+        ixx="2.44019462229731E-07"
+        ixy="1.33287510791561E-08"
+        ixz="2.103788473131E-23"
+        iyy="2.49471254478328E-07"
+        iyz="-1.94787062170327E-23"
+        izz="2.60349994145207E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR2"
+    type="revolute">
+    <origin
+      xyz="-0.00199999999999467 -0.0338286460705983 0.0414472279534962"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller2" />
+    <axis
+      xyz="-0.774714541187017 0.632311141506608 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller3">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -9.71445146547012E-17 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.57737238619828E-07"
+        ixy="8.01652563352113E-09"
+        ixz="-3.45148680127775E-24"
+        iyy="2.3575347808823E-07"
+        iyz="-6.49877948417697E-24"
+        izz="2.60349994145205E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR3"
+    type="revolute">
+    <origin
+      xyz="-0.002 -0.0508665312198412 0.0165784800769172"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller3" />
+    <axis
+      xyz="-0.309878132278849 0.950776284483039 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller4">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -1.04083408558608E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.58603638645392E-07"
+        ixy="-6.66838087859752E-09"
+        ixz="2.03242611109907E-23"
+        iyy="2.34887078062667E-07"
+        iyz="4.95536753563519E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR4"
+    type="revolute">
+    <origin
+      xyz="-0.00200000000000067 -0.0517546521125136 -0.0135538180861484"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller4" />
+    <axis
+      xyz="0.253342394133594 0.967376675000312 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller5">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -1.20563281580388E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.45605693411063E-07"
+        ixy="-1.35568166922895E-08"
+        ixz="1.45361749618953E-23"
+        iyy="2.47885023296995E-07"
+        iyz="8.33945383381417E-24"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR5"
+    type="revolute">
+    <origin
+      xyz="-0.00200000000000022 -0.0362110366403744 -0.039382874773562"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller5" />
+    <axis
+      xyz="0.736128500440443 0.676841806361948 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller6">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 -1.05818132034585E-16 -7.68829444552921E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.33940210208466E-07"
+        ixy="-4.59502948638594E-09"
+        ixz="-4.26819156548946E-23"
+        iyy="2.59550506499591E-07"
+        iyz="-8.70645337020323E-24"
+        izz="2.60349994145205E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR6"
+    type="revolute">
+    <origin
+      xyz="-0.00200000000000089 -0.00917067288985063 -0.0527081469864678"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller6" />
+    <axis
+      xyz="0.985199009092887 0.171414446539353 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller7">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -1.12757025938492E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.37246121730235E-07"
+        ixy="9.7391282246275E-09"
+        ixz="1.83370490172689E-23"
+        iyy="2.56244594977823E-07"
+        iyz="-7.45228384320105E-24"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR7"
+    type="revolute">
+    <origin
+      xyz="-0.00199999999997957 0.0207813147063108 -0.0492989549491662"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller7" />
+    <axis
+      xyz="0.921475793441901 -0.388435788902901 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller8">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -1.196959198424E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.51658255488429E-07"
+        ixy="1.26865896425071E-08"
+        ixz="-3.93680277742953E-23"
+        iyy="2.41832461219629E-07"
+        iyz="8.70914202804592E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR8"
+    type="revolute">
+    <origin
+      xyz="-0.002 0.0441353817169665 -0.0302376930452262"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller8" />
+    <axis
+      xyz="-0.565190524209944 0.824960405924605 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller9">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -1.11022302462516E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60326377431751E-07"
+        ixy="8.01271377956044E-10"
+        ixz="9.03880918411913E-25"
+        iyy="2.33164339276308E-07"
+        iyz="2.16175740713064E-24"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR9"
+    type="revolute">
+    <origin
+      xyz="-0.00200000000000089 0.0534767768781886 -0.00157617724878377"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller9" />
+    <axis
+      xyz="-0.029461256986742 0.999565922956941 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller10">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 -1.11022302462516E-16 -7.68829444552921E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.5311597965313E-07"
+        ixy="-1.20208693227238E-08"
+        ixz="4.67615209142722E-24"
+        iyy="2.40374737054928E-07"
+        iyz="6.86650907456802E-24"
+        izz="2.60349994145205E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR10"
+    type="revolute">
+    <origin
+      xyz="-0.002 0.0458396732294379 0.0275857636874091"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller10" />
+    <axis
+      xyz="0.515621751166458 0.856816322045767 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller11">
+    <inertial>
+      <origin
+        xyz="0 -8.32667268468867E-17 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.384572427359E-07"
+        ixy="-1.07885705499426E-08"
+        ixz="-2.470109256652E-23"
+        iyy="2.55033473972158E-07"
+        iyz="-1.03022536324321E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR11"
+    type="revolute">
+    <origin
+      xyz="-0.00199999999999978 0.0236487972180019 0.0479894195645412"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller11" />
+    <axis
+      xyz="0.896998496533502 0.442033592859905 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller12">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -1.11022302462516E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.37246121730235E-07"
+        ixy="9.73912822462785E-09"
+        ixz="1.10702447189617E-23"
+        iyy="2.56244594977823E-07"
+        iyz="-1.10915183692019E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR12"
+    type="revolute">
+    <origin
+      xyz="0.0170000000000001 -0.0207813147063069 0.0492989549491414"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller12" />
+    <axis
+      xyz="-0.921475793441896 0.388435788902914 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller13">
+    <inertial>
+      <origin
+        xyz="0 -1.2490009027033E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.51658255488429E-07"
+        ixy="1.26865896425068E-08"
+        ixz="7.4088045162692E-24"
+        iyy="2.41832461219628E-07"
+        iyz="-6.263906588971E-24"
+        izz="2.60349994145205E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR13"
+    type="revolute">
+    <origin
+      xyz="0.0170000000000003 -0.0441353817169672 0.0302376930452306"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller13" />
+    <axis
+      xyz="-0.565190524209926 0.824960405924617 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller14">
+    <inertial>
+      <origin
+        xyz="0 -1.11022302462516E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.60326377431751E-07"
+        ixy="8.01271377955318E-10"
+        ixz="-4.23273605429829E-25"
+        iyy="2.33164339276308E-07"
+        iyz="-7.83935770473028E-24"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller14.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller14.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR14"
+    type="revolute">
+    <origin
+      xyz="0.0169999999999997 -0.0534767768782069 0.00157617724879133"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller14" />
+    <axis
+      xyz="-0.0294612569867206 0.999565922956942 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller15">
+    <inertial>
+      <origin
+        xyz="0 -1.11022302462516E-16 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.5311597965313E-07"
+        ixy="-1.2020869322724E-08"
+        ixz="1.2513976006758E-23"
+        iyy="2.40374737054929E-07"
+        iyz="1.42573786510537E-23"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller15.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller15.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR15"
+    type="revolute">
+    <origin
+      xyz="0.0170000000000015 -0.0458396732294469 -0.0275857636874075"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller15" />
+    <axis
+      xyz="-0.515621751166461 -0.856816322045765 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller16">
+    <inertial>
+      <origin
+        xyz="0 -1.16226472890446E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.384572427359E-07"
+        ixy="-1.07885705499425E-08"
+        ixz="-6.55449601812219E-23"
+        iyy="2.55033473972158E-07"
+        iyz="-3.50831964503385E-23"
+        izz="2.60349994145205E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller16.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller16.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR16"
+    type="revolute">
+    <origin
+      xyz="0.0169999999999995 -0.0236487972180009 -0.0479894195645441"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller16" />
+    <axis
+      xyz="-0.896998496533507 -0.442033592859895 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller17">
+    <inertial>
+      <origin
+        xyz="0 -1.12757025938492E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.33488721740396E-07"
+        ixy="3.05740097217211E-09"
+        ixz="2.07554222599445E-23"
+        iyy="2.60001994967663E-07"
+        iyz="-3.20683292420314E-24"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller17.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller17.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR17"
+    type="revolute">
+    <origin
+      xyz="0.017000000000007 0.00605040481573627 -0.0531567738069806"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller17" />
+    <axis
+      xyz="-0.993584557139678 0.113091678798881 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller18">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 -1.20129600711394E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.44019462229731E-07"
+        ixy="1.33287510791558E-08"
+        ixz="9.18226469702803E-24"
+        iyy="2.49471254478327E-07"
+        iyz="-2.761896945568E-24"
+        izz="2.60349994145205E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller18.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller18.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR18"
+    type="revolute">
+    <origin
+      xyz="0.017000000000015 0.0338286460706206 -0.0414472279535256"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller18" />
+    <axis
+      xyz="-0.774714541187006 0.632311141506622 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller19">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 -1.04083408558608E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.57737238619828E-07"
+        ixy="8.01652563352089E-09"
+        ixz="3.53615954227184E-24"
+        iyy="2.3575347808823E-07"
+        iyz="1.43749160119676E-24"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller19.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller19.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR19"
+    type="revolute">
+    <origin
+      xyz="0.0170000000000003 0.050866531219842 -0.0165784800769123"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller19" />
+    <axis
+      xyz="-0.309878132278835 0.950776284483044 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller20">
+    <inertial>
+      <origin
+        xyz="0 -1.04083408558608E-16 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.58603638645391E-07"
+        ixy="-6.6683808785979E-09"
+        ixz="4.81757759893681E-24"
+        iyy="2.34887078062667E-07"
+        iyz="-2.61770198094414E-24"
+        izz="2.60349994145205E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller20.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller20.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR20"
+    type="revolute">
+    <origin
+      xyz="0.0169999999999999 0.0517546521125101 0.0135538180861544"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller20" />
+    <axis
+      xyz="0.25334239413361 0.967376675000307 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller21">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -9.71445146547012E-17 -7.68807240092428E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.45605693411062E-07"
+        ixy="-1.35568166922895E-08"
+        ixz="5.0388559089284E-24"
+        iyy="2.47885023296996E-07"
+        iyz="6.21661304438233E-24"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller21.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller21.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR21"
+    type="revolute">
+    <origin
+      xyz="0.017000000000001 0.0362110366403566 0.0393828747735673"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller21" />
+    <axis
+      xyz="0.736128500440454 0.676841806361936 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Back_Left_Wheel_Roller22">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -9.71445146547012E-17 -7.68785035631936E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00508654848008634" />
+      <inertia
+        ixx="2.33940210208466E-07"
+        ixy="-4.59502948638538E-09"
+        ixz="1.287824502251E-23"
+        iyy="2.59550506499592E-07"
+        iyz="8.55013040856715E-24"
+        izz="2.60349994145206E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Back_Left_Wheel_Roller22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWR22"
+    type="revolute">
+    <origin
+      xyz="0.0170000000000008 0.00917067288984963 0.0527081469864699"
+      rpy="1.57079632679489 0 -1.5707963267949" />
+    <parent
+      link="Back_Left_Wheel_Link" />
+    <child
+      link="Back_Left_Wheel_Roller22" />
+    <axis
+      xyz="-0.985199009092891 -0.17141444653933 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Right_Arm_Link">
+    <inertial>
+      <origin
+        xyz="-0.00319908635903898 -0.0538116646486427 0.000209917453226183"
+        rpy="0 0 0" />
+      <mass
+        value="0.2411231125131" />
+      <inertia
+        ixx="0.000279300051096263"
+        ixy="2.38237867317078E-07"
+        ixz="-1.49205444026858E-05"
+        iyy="0.000174888526760812"
+        iyz="-5.05000199583918E-06"
+        izz="0.000196306654459668" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Right_Arm_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Right_Arm_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightArm"
+    type="revolute">
+    <origin
+      xyz="0.00280434448534672 -0.136617758836129 1.28736704151663"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Right_Arm_Link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RightArm_Shoulder_Link">
+    <inertial>
+      <origin
+        xyz="-0.039282208423516 -0.00838522868600274 -0.0652100490091678"
+        rpy="0 0 0" />
+      <mass
+        value="0.311661100333694" />
+      <inertia
+        ixx="0.00028174758490502"
+        ixy="3.45276083188938E-07"
+        ixz="-7.6876219820148E-06"
+        iyy="0.000217342423777064"
+        iyz="1.91706842745348E-06"
+        izz="0.000234725444364916" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/RightArm_Shoulder_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/RightArm_Shoulder_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightArmShoulder"
+    type="revolute">
+    <origin
+      xyz="0.0193273188943669 -0.0589999999999485 -0.00316874507095366"
+      rpy="0 0 0" />
+    <parent
+      link="Right_Arm_Link" />
+    <child
+      link="RightArm_Shoulder_Link" />
+    <axis
+      xyz="0.986824957648917 0 -0.16179154168625" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RightArm_Bicep_Link">
+    <inertial>
+      <origin
+        xyz="-0.0117331372093953 -0.00953358343077122 -0.05920770396782"
+        rpy="0 0 0" />
+      <mass
+        value="0.323026359339606" />
+      <inertia
+        ixx="0.000328531448457709"
+        ixy="-1.42618631136935E-05"
+        ixz="-4.3999073276975E-05"
+        iyy="0.000427307684758154"
+        iyz="-3.08674154548233E-05"
+        izz="0.000182323745252468" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/RightArm_Bicep_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/RightArm_Bicep_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightArmBicep"
+    type="revolute">
+    <origin
+      xyz="-0.0481576638957708 -0.015030770933102 -0.120915991222534"
+      rpy="0 0 0" />
+    <parent
+      link="RightArm_Shoulder_Link" />
+    <child
+      link="RightArm_Bicep_Link" />
+    <axis
+      xyz="-0.160672172498942 -0.11742789791461 -0.979997521311062" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RightArm_Elbow_Link">
+    <inertial>
+      <origin
+        xyz="-0.0071709837606978 -0.024863854202184 -0.0957601721011655"
+        rpy="0 0 0" />
+      <mass
+        value="0.61950759906594" />
+      <inertia
+        ixx="0.00178436331219593"
+        ixy="-2.44221267317929E-05"
+        ixz="-7.69772901817924E-05"
+        iyy="0.00193413121535301"
+        iyz="-0.00016975795789929"
+        izz="0.000427041366566937" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/RightArm_Elbow_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/RightArm_Elbow_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightArmElbow"
+    type="revolute">
+    <origin
+      xyz="-0.0184358692820163 0.00240612789194545 -0.105429261936087"
+      rpy="0 0 0" />
+    <parent
+      link="RightArm_Bicep_Link" />
+    <child
+      link="RightArm_Elbow_Link" />
+    <axis
+      xyz="-0.0936412664728308 0.990232338052378 -0.103301645140266" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RightArm_Forearm_Link">
+    <inertial>
+      <origin
+        xyz="-0.00311346910001919 -0.00476146511706703 -0.0324323972973468"
+        rpy="0 0 0" />
+      <mass
+        value="0.147718074796863" />
+      <inertia
+        ixx="0.000156679076755561"
+        ixy="-1.33162632551127E-05"
+        ixz="-7.37553640585067E-06"
+        iyy="0.000117727420226963"
+        iyz="-1.91705936524067E-06"
+        izz="8.68737238767198E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/RightArm_Forearm_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/RightArm_Forearm_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightArmForearm"
+    type="revolute">
+    <origin
+      xyz="-0.0145257877519153 -0.0376898466110528 -0.195388870805749"
+      rpy="0 0 0" />
+    <parent
+      link="RightArm_Elbow_Link" />
+    <child
+      link="RightArm_Forearm_Link" />
+    <axis
+      xyz="-0.105003189620438 -0.113001605749664 -0.988030853398583" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="RightArm_Wrist_Link">
+    <inertial>
+      <origin
+        xyz="-0.0314861935203675 -0.00311291466222 -0.0851008308387041"
+        rpy="0 0 0" />
+      <mass
+        value="0.176741760569648" />
+      <inertia
+        ixx="0.000149899679716174"
+        ixy="1.37306949817983E-05"
+        ixz="-6.64977550523058E-06"
+        iyy="0.000195122645925074"
+        iyz="-1.8804112015171E-05"
+        izz="6.30030571886813E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/RightArm_Wrist_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/RightArm_Wrist_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightArmWrist"
+    type="revolute">
+    <origin
+      xyz="0.0151820310087889 -0.0177604397296329 -0.0887494587552932"
+      rpy="0 0 0" />
+    <parent
+      link="RightArm_Forearm_Link" />
+    <child
+      link="RightArm_Wrist_Link" />
+    <axis
+      xyz="-0.956437371422623 0.283615517097886 0.0692083304775051" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Left_Arm_Link">
+    <inertial>
+      <origin
+        xyz="-0.00309863538382604 0.0537971823209204 0.000822604175298558"
+        rpy="0 0 0" />
+      <mass
+        value="0.2411231125131" />
+      <inertia
+        ixx="0.000279867603226934"
+        ixy="-1.83833134200038E-06"
+        ixz="-1.32362173886209E-05"
+        iyy="0.000174888526760811"
+        iyz="-4.70954512839482E-06"
+        izz="0.000195739102329001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Left_Arm_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/Left_Arm_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftArm"
+    type="revolute">
+    <origin
+      xyz="0.00280434448532774 0.136382241163908 1.28736704151668"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left_Arm_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LeftArm_Shoulder_Link">
+    <inertial>
+      <origin
+        xyz="-0.0411920970980613 0.01121950238909 -0.0644976417806531"
+        rpy="0 0 0" />
+      <mass
+        value="0.311660962803201" />
+      <inertia
+        ixx="0.00028174273226757"
+        ixy="-4.48715147501012E-07"
+        ixz="-7.71646697323095E-06"
+        iyy="0.000217522396279789"
+        iyz="-2.54357205653912E-06"
+        izz="0.000234550106420069" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/LeftArm_Shoulder_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/LeftArm_Shoulder_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftArmShoulder"
+    type="revolute">
+    <origin
+      xyz="0.0212526827256898 0.0568387609445205 -0.00378684239346616"
+      rpy="0 0 0" />
+    <parent
+      link="Left_Arm_Link" />
+    <child
+      link="LeftArm_Shoulder_Link" />
+    <axis
+      xyz="-0.986824957648915 0 0.161791541686259" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LeftArm_Bicep_Link">
+    <inertial>
+      <origin
+        xyz="-0.0118013849782803 0.00649876131839738 -0.059624045037753"
+        rpy="0 0 0" />
+      <mass
+        value="0.323026333335414" />
+      <inertia
+        ixx="0.000328531389040259"
+        ixy="1.42620305953671E-05"
+        ixz="-4.39987252066668E-05"
+        iyy="0.000427307074201422"
+        iyz="3.08694606882458E-05"
+        izz="0.000182324127532726" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/LeftArm_Bicep_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/LeftArm_Bicep_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftArmBicep"
+    type="revolute">
+    <origin
+      xyz="-0.0500147641035623 0.020212468184198 -0.119881529443184"
+      rpy="0 0 0" />
+    <parent
+      link="LeftArm_Shoulder_Link" />
+    <child
+      link="LeftArm_Bicep_Link" />
+    <axis
+      xyz="-0.159761627909043 0.157909907688714 -0.974443781498755" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LeftArm_Elbow_Link">
+    <inertial>
+      <origin
+        xyz="-0.0071707102808205 0.0248721285273059 -0.0957601951415733"
+        rpy="0 0 0" />
+      <mass
+        value="0.619509733358952" />
+      <inertia
+        ixx="0.00178406265556455"
+        ixy="2.43800907545036E-05"
+        ixz="-7.69309177627408E-05"
+        iyy="0.00193384205333239"
+        iyz="0.000169687296733672"
+        izz="0.000427024925523664" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/LeftArm_Elbow_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/LeftArm_Elbow_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftArmElbow"
+    type="revolute">
+    <origin
+      xyz="-0.0185041329055635 -0.00544106841531805 -0.105845626392953"
+      rpy="0 0 0" />
+    <parent
+      link="LeftArm_Bicep_Link" />
+    <child
+      link="LeftArm_Elbow_Link" />
+    <axis
+      xyz="-0.0936412664728313 -0.99023233805237 -0.103301645140337" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LeftArm_Forearm_Link">
+    <inertial>
+      <origin
+        xyz="-0.00310984379437507 0.00476953455916845 -0.0324268496296242"
+        rpy="0 0 0" />
+      <mass
+        value="0.147802060954706" />
+      <inertia
+        ixx="0.000156700123332575"
+        ixy="1.33151923667043E-05"
+        ixz="-7.38052459917246E-06"
+        iyy="0.00011774611910131"
+        iyz="1.92462159114714E-06"
+        izz="8.6889373349103E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/LeftArm_Forearm_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/LeftArm_Forearm_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftArmForearm"
+    type="revolute">
+    <origin
+      xyz="-0.0145257877519153 0.0376898466110678 -0.195388870805746"
+      rpy="0 0 0" />
+    <parent
+      link="LeftArm_Elbow_Link" />
+    <child
+      link="LeftArm_Forearm_Link" />
+    <axis
+      xyz="-0.105003189620438 0.113001605749739 -0.988030853398574" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="LeftArm_Wrist_Link">
+    <inertial>
+      <origin
+        xyz="-0.0317706612027606 0.00437703312598603 -0.0850259096750661"
+        rpy="0 0 0" />
+      <mass
+        value="0.174792179612263" />
+      <inertia
+        ixx="0.000146272389750887"
+        ixy="-1.31231153695857E-05"
+        ixz="-6.37829143315341E-06"
+        iyy="0.000189388696543605"
+        iyz="1.78809096911049E-05"
+        izz="6.00078313679523E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/LeftArm_Wrist_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/LeftArm_Wrist_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftArmWrist"
+    type="revolute">
+    <origin
+      xyz="0.0151820310087892 0.0177604397296373 -0.0887494587552778"
+      rpy="0 0 0" />
+    <parent
+      link="LeftArm_Forearm_Link" />
+    <child
+      link="LeftArm_Wrist_Link" />
+    <axis
+      xyz="-0.956437371422624 -0.283615517097885 0.0692083304774837" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lidar_link">
+    <inertial>
+      <origin
+        xyz="-4.14988665482507E-05 1.90275608630275E-07 -0.0423073766825668"
+        rpy="0 0 0" />
+      <mass
+        value="0.0456707557264015" />
+      <inertia
+        ixx="4.00681941394004E-05"
+        ixy="2.9403771942503E-11"
+        ixz="-8.08418484465297E-10"
+        iyy="1.43875316850389E-05"
+        iyz="-2.02668890735487E-11"
+        izz="4.95648042819473E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0823529411764706 0.0823529411764706 0.0823529411764706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eva_new/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser_joint"
+    type="fixed">
+    <origin
+      xyz="0.244443796320795 -0.000121007645980081 0.156750000000016"
+      rpy="0 0 3.14" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <gazebo reference="lidar_link">
+   <sensor name="eva_lidar" type="gpu_lidar">
+     <pose> 0 0 0 0 0 0</pose>
+     <topic>lidar</topic>
+     <update_rate>10</update_rate>
+     <lidar>
+        <scan>
+          <horizontal>
+            <samples>180</samples>
+            <resolution>1</resolution>
+            <min_angle>1.57</min_angle>
+            <max_angle>-1.57</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.01</min>
+          <max>10.0</max>
+          <resolution>0.02</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+     </lidar>
+     <always_on>1</always_on>
+     <visualize>true</visualize>
+   </sensor>
+ </gazebo>
+</robot>

@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.status-panel, .locations-grid, .locations-list {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.status-panel h2, .locations-grid h2, .locations-list h3 {
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+#status {
+    font-size: 1.2em;
+    padding: 15px;
+    background: #f7fafc;
+    border-radius: 8px;
+    border-left: 4px solid #4299e1;
+    margin-bottom: 15px;
+    min-height: 20px;
+}
+
+#status.idle { border-left-color: #48bb78; }
+#status.navigating { border-left-color: #ed8936; }
+#status.error { border-left-color: #f56565; }
+
+#refresh-status {
+    background: #4299e1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#refresh-status:hover { background: #3182ce; }
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.loc-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.loc-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.loc-btn:active { transform: translateY(0); }
+
+.loc-btn.sending {
+    background: #ed8936;
+    cursor: wait;
+}
+
+#locations-data {
+    background: #f7fafc;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.9em;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+    .container { padding: 10px; }
+    header h1 { font-size: 2em; }
+    .locations-grid { grid-template-columns: 1fr; }
+}
